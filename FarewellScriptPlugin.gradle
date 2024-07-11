@@ -1,0 +1,11 @@
+class FarewellScriptPlugin implements Plugin<Project>{
+    void apply(Project project){
+        project.task('bye'){
+            doLast {
+                println ("Bye from scriptplugin")
+            }
+        }
+    }
+}
+
+apply plugin: FarewellScriptPlugin
